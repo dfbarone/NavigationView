@@ -10,15 +10,12 @@
             android:id="@+id/left_nav_view"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
-            android:background="?android:attr/windowBackground"
-            android:elevation="4dp"
-            android:translationZ="4dp"
             app:compactModeThresholdWidth="0dp"
-            app:compactModeWidth="?attr/actionBarSize"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:paneDisplayMode="Auto"
+            style="@style/NavigationViewStyle"
             >
 
         <LinearLayout
