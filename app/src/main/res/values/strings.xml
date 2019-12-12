@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NavigationView Samples</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_home_abbr">Home</string>
+    <string name="title_dashboard_abbr">Dash</string>
+    <string name="title_notifications_abbr">Alerts</string>
+</resources>

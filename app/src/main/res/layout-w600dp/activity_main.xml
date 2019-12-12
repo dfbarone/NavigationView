@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    <com.dfbarone.android.navigationview.widget.NavigationView
+            android:id="@+id/left_nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="?android:attr/windowBackground"
+            android:elevation="4dp"
+            android:translationZ="4dp"
+            app:compactModeThresholdWidth="0dp"
+            app:compactModeWidth="?attr/actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:paneDisplayMode="Auto"
+            >
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/navigation_home"
+                    android:drawableTop="@drawable/ic_home_black_24dp"
+                    android:text="@string/title_home_abbr"
+                    style="@style/AppCompatButtonStyle"
+                    />
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/navigation_dashboard"
+                    android:drawableTop="@drawable/ic_dashboard_black_24dp"
+                    android:text="@string/title_dashboard_abbr"
+                    style="@style/AppCompatButtonStyle"
+                    />
+
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/navigation_notifications"
+                    android:drawableTop="@drawable/ic_notifications_black_24dp"
+                    android:text="@string/title_notifications_abbr"
+                    style="@style/AppCompatButtonStyle"
+                    />
+
+        </LinearLayout>
+
+    </com.dfbarone.android.navigationview.widget.NavigationView>
+
+    <fragment
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/left_nav_view"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/mobile_navigation"
+            />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
